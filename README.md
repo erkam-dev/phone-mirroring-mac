@@ -1,30 +1,26 @@
-# Phone Mirroring
-### iPhone Mirroring App Alternative for Mac (to mirror Android, of course)
-Mirror your Android screen on Mac with scrcpy
+# Phone Mirroring for Mac
+A smooth, native macOS companion app to mirror and control your Android screen wirelessly or via USB with low-latency hardware acceleration using `scrcpy`.
 
-## Requirements
-- [Homebrew](https://brew.sh/)
-- [scrcpy](https://formulae.brew.sh/formula/scrcpy)
+## ✨ Features
+- **Auto-Connect**: Detects USB-connected devices or auto-reconnects to your last paired Wi-Fi device immediately.
+- **Mac Camera QR Code Scanner**:
+  - Opens your Mac's camera with live viewfinder preview.
+  - Automatically reads the Android Wireless Debugging QR code (`WIFI:T:ADB;S:...;P:...;;`) straight from your phone screen using Apple's Vision framework.
+- **Manual IP & Code Pairing**: Easy fallback dialog to enter IP:Port and 6-digit pairing code manually.
+- **Ultra-Smooth Low Latency Tuning**:
+  - Hardware accelerated H.264 decoding on Apple Silicon
+  - Locked 60 FPS pacing
+  - 16 Mbps bitrate for sharp text and crisp UI
+  - 20ms video jitter buffer & 50ms audio buffer to eliminate Wi-Fi audio/video drops
 
-## How to use
-1. Install the required packages.
-2. Download the Phone Mirroring.zip file from 'Releases'
-3. Extract the app file to Applications folder on your Mac.
-4. Connect your Android device via ADB. [Learn more about the ADB](https://developer.android.com/tools/adb)
-5. Run the app
-
-That's it. you should see your phone screen on your Mac.
-
-## Important Notes
-It can give error when you want to run it. you can give permission to app to run, to do that:
-
-1. Go to System Settings > Privacy & Security page.
-2. When you scroll all the way down, you should see the option to run app
-3. You can try to run again and it should work.
-4. Maybe System could ask about trusting the developer. You can trust to the developer with all your heart :)
-
-You can inspect the app itself. There is only bash script to run scrcpy with some configurations to stay awake and turning screen off of your android device.
-
-I put some configurations for scrcpy in the application file. For example:
-- When you run the program without connecting any Android device, you will get an error dialog. (scrcpy does not normally include this)
-- The phone screen will be turned off and the phone will not be locked with a timeout when the app is started. You can override this with locking your phone and unlocking it again, while the app is running.
+## 🚀 How to Use
+1. Install prerequisites (if not already installed):
+   ```bash
+   brew install scrcpy
+   ```
+2. Open **Phone Mirroring** from Launchpad or Spotlight (`Cmd + Space` → `Phone Mirroring`).
+3. Connect wirelessly:
+   - On Android: Go to **Settings → Developer Options → Wireless Debugging → "Pair device with QR code"**.
+   - Hold your phone screen up to your Mac's camera.
+   - The app instantly detects the QR code, extracts the credentials, and establishes the wireless ADB connection.
+4. Or connect via USB cable for instant plug-and-play mirroring.

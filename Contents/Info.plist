@@ -2,28 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <!-- Basic app metadata -->
     <key>CFBundleExecutable</key>
-    <string>scrcpy.command</string>
+    <string>PhoneMirroring</string>
     <key>CFBundleIdentifier</key>
-    <string>com.yourcompany.scrcpyapp</string>
+    <string>com.erkam.phonemirroring</string>
     <key>CFBundleName</key>
-    <string>SCRCPY</string>
+    <string>Phone Mirroring</string>
+    <key>CFBundleDisplayName</key>
+    <string>Phone Mirroring</string>
     <key>CFBundleVersion</key>
-    <string>1.0</string>
+    <string>2.0</string>
+    <key>CFBundleShortVersionString</key>
+    <string>2.0</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleIconFile</key>
     <string>app_icon</string>
-
-    <!-- Optional settings -->
-    <key>CFBundleSignature</key>
-    <string>????</string>
-    <key>LSUIElement</key>
+    <key>LSMinimumSystemVersion</key>
+    <string>12.0</string>
+    <key>NSHighResolutionCapable</key>
     <true/>
-
-    <!-- Permissions -->
-    <key>NSMicrophoneUsageDescription</key>
-    <string>This app requires access to the microphone to recognize speech.</string>
 </dict>
 </plist>
